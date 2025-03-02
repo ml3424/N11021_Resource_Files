@@ -1,5 +1,12 @@
 package com.example.n11021_resource_files;
 
+/**
+ * @author	Maya Leibovich mayaLeibovich3@gmail.com
+ * @version	 1.2
+ * @since	02/03/2025
+ * Resource files practice
+ */
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -38,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * onclick that reads from file and presents it on the text view
+     * @param	view View
+     * @return	none
+     */
     public void clickRawFile(View view) {
         String fileName = FILENAME.substring(0, FILENAME.length() - 4);
         int resourceId = this.getResources().getIdentifier(fileName, "raw", this.getPackageName());
@@ -63,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * onclick that reads from edit text and presents it on the text view
+     * @param	view View
+     * @return	none
+     */
     public void clickText(View view) {
         tVText.setText(eTText.getText().toString());
     }
